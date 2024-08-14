@@ -29,4 +29,5 @@ jobs:
 
       - name: Push Docker Image
         run: |
+          docker push ghcr.io/$GITHUB_ACTOR/${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}:latest
           docker push ghcr.io/$GITHUB_ACTOR/${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}:$(echo $GITHUB_SHA | head -c7)
