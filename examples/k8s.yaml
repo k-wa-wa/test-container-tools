@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nw-tools
+spec:
+  selector:
+    matchLabels:
+      app: nw-tools
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nw-tools
+    spec:
+      nodeName: node-2
+      containers:
+      - name: nw-tools
+        image: ghcr.io/k-wa-wa/nw-tools:8c2a978
+
