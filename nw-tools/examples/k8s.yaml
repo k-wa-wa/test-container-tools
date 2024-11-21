@@ -12,7 +12,6 @@ spec:
       labels:
         app: nw-tools
     spec:
-      nodeName: node-2
       containers:
       - name: nw-tools
         image: ghcr.io/k-wa-wa/nw-tools:8c2a978
